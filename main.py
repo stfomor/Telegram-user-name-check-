@@ -60,7 +60,7 @@ def save_result(text, folder="results"):
     with open(f"{folder}/Valid-{timestamp()}.txt", 'a', encoding='utf-8') as f:
         f.write(text + '\n')
 
-def save_all_checked(text, folder="results"):
+def save_all_checked(text, folder="/storage/emulated/0/Download/results"):
     os.makedirs(folder, exist_ok=True)
     with open(f"{folder}/All-Checked-{timestamp()}.txt", 'a', encoding='utf-8') as f:
         f.write(text + '\n')
