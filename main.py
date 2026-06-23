@@ -55,12 +55,12 @@ def load_usernames(file, config):
     with open(file, 'r', encoding='utf-8') as f:
         return [line.strip() for line in f if line.strip()]
 
-def save_result(text, folder="results"):
+def save_result(text, folder="/storage/emulated/0/download/results"):
     os.makedirs(folder, exist_ok=True)
     with open(f"{folder}/Valid-{timestamp()}.txt", 'a', encoding='utf-8') as f:
         f.write(text + '\n')
 
-def save_all_checked(text, folder="/storage/emulated/0/Download/results"):
+def save_all_checked(text, folder="/storage/emulated/0/download/results"):
     os.makedirs(folder, exist_ok=True)
     with open(f"{folder}/All-Checked-{timestamp()}.txt", 'a', encoding='utf-8') as f:
         f.write(text + '\n')
