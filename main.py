@@ -14,13 +14,8 @@ TAKEN = 0
 def banner(config):
     os.system('cls' if os.name == 'nt' else 'clear')
     banner_text = r"""
-   ______           __                     ____             ___
-  / ____/___ ______/ /_  ____ _____ ____  / __ )____ _____ <  /
- / / __/ __ `/ ___/ __ \/ __ `/ __ `/ _ \/ __  / __ `/ __ `/ / 
-/ /_/ / /_/ / /  / /_/ / /_/ / /_/ /  __/ /_/ / /_/ / /_/ / /  
-\____/\__,_/_/  /_.___/\__,_/\__, /\___/_____/\__,_/\__, /_/   
-                            /____/                 /____/
 
+  
    ____  __  ___   ___    ____     _________    ____  __  ___
   / __ \/  |/  /  /   |  / __ \   / ____/   |  / __ \/ / / / |
  / / / / /|_/ /  / /| | / /_/ /  / /_  / /| | / /_/ / / / /  |
@@ -114,7 +109,7 @@ async def async_main():
     global AVAILABLE, TAKEN
     config = load_config()
     banner(config)
-    usernames = load_usernames("usernames.txt", config)
+    usernames = load_usernames("/storage/emulated/0/Download/usernames.txt", config)
     
     if not usernames:
         name = input("[?] Enter one username to check:\n[>] ").strip()
